@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   applicationName: "Follownesia",
   creator: "Follownesia Team",
   publisher: "Follownesia",
-  metadataBase: new URL("https://follownesia.id"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://follownesia.id"),
   alternates: {
-    canonical: "https://follownesia.id",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://follownesia.id",
   },
   robots: {
     index: true,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://follownesia.id",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://follownesia.id",
     siteName: "Follownesia",
     title: "Follownesia - Cara Menambah Followers Instagram & TikTok dengan AI",
     description: "Platform terpercaya untuk meningkatkan followers Instagram dan TikTok dengan sistem AI Growth yang terbukti efektif.",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cara%20Mendapatkan%20Followers-wjjO3rGl62x8pvr3MI37JQjNqcuO93.png"],
   },
   verification: {
-    google: "your-google-verification-code", // Replace with actual code from Google Search Console
+    google: process.env.GOOGLE_SITE_VERIFICATION || "add-your-google-verification-code-here",
   },
 }
 
